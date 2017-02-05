@@ -1,8 +1,8 @@
 @import '../common';
 
 .navbar {
-  height: 6.5rem;
-  background-color: $primaryColor;
+  height: 3.5rem;
+  background-color: $bgColor;
   padding: 1rem;
 
   .nav-links,
@@ -12,11 +12,52 @@
 
   .logo {
     color: $lightTextColor;
-    margin-right: 50%;
+    margin-right: 5%;
+    background-color: $darkBgColor;
+
+    h1 {
+      padding: 0.4rem;
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: $lightTextColor;
+    }
+  }
+  
+  .nav-links span {
+
+    margin-right: 2rem;
+
+    a,
+    a:visited {
+      color: $primaryColor;
+      font-size: 1.6rem;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+    
+
+    a,
+    a:visited {
+      color: $primaryColor;
+      font-size: 1.6rem;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   }
 
-  .nav-links span {
-    color: $lightTextColor;
-    font-size: 1.6rem;
-  }
 }
