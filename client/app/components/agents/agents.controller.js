@@ -41,7 +41,6 @@ class AgentsController {
           this.results = results;
         })
     }, 250);
-  // }
 }
 
 AgentsController.$inject = ['AgentSearchService'];

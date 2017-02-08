@@ -7,7 +7,8 @@
 
     <div class="results">
         <ul>
-            <li data-ng-repeat="r in $ctrl.results.Results">{{r}}</li>
+            <li data-ng-repeat="r in $ctrl.results.Results">
+                <a data-ng-href="https://www.ratemyagent.com.au{{r.Url}}" target="_blank">{{r.Name}} {{c.SecondaryName}}</a></li>
         </ul>
     </div>
 </section>

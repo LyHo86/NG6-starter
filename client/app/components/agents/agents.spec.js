@@ -5,6 +5,12 @@ describe('Agents', () => {
 
   beforeEach(window.module(AgentsModule));
 
+  beforeEach(function() {
+    angular.mock.module(function($provide) {
+      $provide.value('AgentSearchService', null);
+    });
+  });
+
   beforeEach(inject(($injector) => {
     $rootScope = $injector.get('$rootScope');
     $componentController = $injector.get('$componentController');
@@ -12,6 +18,8 @@ describe('Agents', () => {
     $location = $injector.get('$location');
     $compile = $injector.get('$compile');
   }));
+
+  
 
   describe('Module', () => {
     // top-level specs: i.e., routes, injection, naming
@@ -47,7 +55,7 @@ describe('Agents', () => {
     });
 
     it('has name in template', () => {
-      expect(template.find('h1').html()).to.eq('agents');
+      expect(template.find('h1').html()).to.eq('Agents');
     });
 
   });
