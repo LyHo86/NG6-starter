@@ -1,5 +1,13 @@
 <navbar></navbar>
-<h1>{{ $ctrl.name }}</h1>
-<section>
-  Agents.
+<section class="agents">
+  <h1>Agents</h1>
+  <input type="text" 
+    data-ng-model="$ctrl.searchText" 
+    data-ng-change="$ctrl.agentSearchOnChange()" />
+
+    <div class="results">
+        <ul>
+            <li data-ng-repeat="r in $ctrl.results.Results">{{r}}</li>
+        </ul>
+    </div>
 </section>

@@ -4,11 +4,13 @@ import Common from './common/common';
 import Components from './components/components';
 import AppComponent from './app.component';
 import 'normalize.css';
+import AgentSearchService from './common/services/agentSearch.service';
 
 angular.module('app', [
     uiRouter,
     Common,
     Components
+    
   ])
   .config(($locationProvider) => {
     "ngInject";
@@ -17,4 +19,5 @@ angular.module('app', [
     $locationProvider.html5Mode(true).hashPrefix('!');
   })
 
-  .component('app', AppComponent);
+  .component('app', AppComponent)
+  .service('AgentSearchService', AgentSearchService);
